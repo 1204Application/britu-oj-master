@@ -62,15 +62,19 @@ public class AbilityImpl implements AbilityService {
             }
         } catch (IOException | JSONException e) {
             System.out.println("能力数据请求失败,是否开启了能力评估系统");
+            return 0.5;
         } finally {
             try {
                 reader.close();
+                return 0.5;
             } catch (IOException e) {
                 System.out.println("数据读取失败");
+
             }
             connection.disconnect();
+            return 0.5;
         }
-     return 0.5;
+
     }
 
 }

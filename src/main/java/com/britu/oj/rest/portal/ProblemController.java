@@ -217,7 +217,7 @@ public class ProblemController {
             User user = (User) userDetails;
             u_id = user.getId();
         }
-        double ability = abilityService.GetAbility(u_id);
+        double ability = 0.5;
         return problemService.listSuggestProblem(ability, SUGGEST_PROBLEM_ROW);
     }
 
